@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Service Kazek</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header .banner {
+          background-color: #333;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          color: white;
+          text-align: center;
+
+          }
+
+        header img{
+          width: 100px;
+
+        }
+
+        header .logo {
+          width: 150px;
+          margin-right: 15px;
+
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .cta {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .language-selector {
+          display: flex;
+          justify-content: center;
+          background-color: #444;
+          padding: 10px;
+        }
+
+        .language-selector button {
+          margin: 0 5px;
+          padding: 5px 10px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .language-selector button:hover {
+          background-color: #0288d1;
+        }
+        .service {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .service img {
+            width: 50%;
+            height: auto;
+        }
+        .service h3 {
+            margin: 15px;
+        }
+        .service p {
+            margin: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+
+      <img src="logo.png" alt="logo" class="logo">
+      <h1 data-i18n="warsztat_samochodowy" class="autos">Auto Service Kazek</h1>
+    </div>
+
+  </header>
+    <nav>
+      <a href="index.html" data-i18n="strona_glowna">Startpagina</a>
+      <a href="uslugi.html" data-i18n="uslugi1">Diensten</a>
+      <a href="o_nas.html" data-i18n="o_nas">Over Ons</a>
+      <a href="kontakt.html" data-i18n="kontakt">Contact</a>
+    </nav>
+    <nav class="language-selector">
+       <button onclick="changeLanguage('pl')">Polski</button>
+       <button onclick="changeLanguage('en')">English</button>
+       <button onclick="changeLanguage('nl')">Nederlands</button>
+       <button onclick="changeLanguage('uk')">Ukraiński</button>
+
+   </nav>
+    <main>
+        <section id="uslugi">
+          <section class="services">
+            <div class="service">
+                <img src="service1.jpg" alt="Wymiana Oleju">
+                <h3 data-i18n="wymiana_oleju">Olie Verversen</h3>
+
+            </div>
+              <div class="service">
+                  <img src="service2.jpg" alt="Naprawa auta">
+                  <h3 data-i18n="naprawa_auta">Auto Reparatie</h3>
+
+              </div>
+
+              <div class="service">
+                  <img src="service4.jpg" alt="Diagnostyka komputerowa">
+                  <h3 data-i18n="diagnostyka_komputerowa">Computerdiagnostiek</h3>
+
+              <div class="service">
+                  <img src="service3.jpg" alt="Wymiana opon">
+                  <h3 data-i18n="wymiana_opon">Banden Vervange</h3>
+              </div>
+          </section>
+    </main>
+
+
+    <script type="text/javascript">
+    const translations = {
+  pl: {
+    strona_glowna: "Strona Główna",
+    uslugi1:"Usługi",
+    o_nas:"O Nas",
+    kontakt:"Kontakt",
+    naprawa_auta: "Naprawa Auta",
+    diagnostyka_komputerowa:" Diagnostyka Komputerowa",
+    wymiana_opon:"Wymiana Opon",
+    wymiana_oleju:"Wymiana Oleju",
+    warsztat_samochodowy:"Auto Service Kazek"
+
+  },
+  en: {
+    strona_glowna: "Home Page",
+    uslugi1:"Services",
+    o_nas:"About Us",
+    kontakt:"Contact",
+    naprawa_auta: "Car Repair",
+    diagnostyka_komputerowa:"Computer Diagnostics",
+    wymiana_opon:"Tire Replacement",
+    wymiana_oleju:"Oil Change",
+    warsztat_samochodowy:"Auto Service Kazek"
+  },
+  nl: {
+    strona_glowna: "Startpagina",
+    uslugi1:"Diensten",
+    o_nas:"Over Ons",
+    kontakt:"Contact",
+    naprawa_auta: "Auto Reparatie",
+    diagnostyka_komputerowa:"Computerdiagnostiek",
+    wymiana_opon:"Banden Vervangen",
+    wymiana_oleju:"Olie Verversen",
+    warsztat_samochodowy:"Auto Service Kazek"
+  },
+  uk:{
+
+    warsztat_samochodowy:"Автосервіс Казек",
+    strona_glowna: "Головна сторінка",
+    uslugi1:"Послуги",
+    o_nas:"Про нас",
+    kontakt:"Контакт",
+    witamy_w_auto:"Ласкаво просимо до Автосервісу Казек!",
+    naprawa_auta:"Ремонт автомобіля",
+    diagnostyka_komputerowa:"Комп’ютерна діагностика",
+    wymiana_opon:"Заміна шин",
+    wymiana_oleju:"Заміна олії",
+
+  }
+};
+
+function changeLanguage(lang) {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = translations[lang][key];
+  });
+}
+
+    </script>
+</body>
+</html>
